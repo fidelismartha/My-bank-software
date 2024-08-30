@@ -1,0 +1,90 @@
+.label{
+    font-size: small;
+}
+.submit2{
+    background-color: rgb(29, 207, 159);
+    color: white;
+}
+.text{
+    font-size: small;
+}
+.text a{
+    text-decoration: none;
+    color: rgb(29, 207, 159) ;
+}
+.a{
+    text-decoration: none;
+    color: rgb(29, 207, 159) ;
+}
+.Name::placeholder{
+    color: gray;
+    font-size: 11px;
+}
+.imger{
+    width: 100%;
+    /* height: 500px; */
+    /* background-position: center; */
+    background-size: cover;
+    background-image: url("images/opayimg.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hrower{
+    height: 100vh;
+}
+.overlay{
+    width: 80%;
+    height: 94vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    
+}
+.logo{
+   cursor: pointer;
+}
+.hr{
+    width: 80px;
+    height: 2px;
+    background-color: white;
+    /* margin-left: 300px; */
+}
+.divimg{
+ width: 140px;
+ cursor: pointer;
+
+}
+.QRimg{
+    width: 160px;
+    cursor: pointer;
+}
+
+.loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.116);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+}
+
+/* /* ....... *loader style starts  */
+
+  
+.custom-loader {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    padding:1px;
+    background:conic-gradient(#0000 10%,rgb(29, 207, 159) ) content-box;
+    -webkit-mask:
+      repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+      radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 8px));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation:s4 1s infinite steps(10);
+  }
+  @keyframes s4 {to{transform: rotate(1turn)}}

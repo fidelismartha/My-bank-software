@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>profile uploade</title>
+</head>
+<style>
+    #content{
+        overflow-x: scroll;
+        scrollbar-width:thin;
+        scroll-behavior: smooth;
+        scrollbar-color: transparent;
+        /* scrollbar-width: 10px; */
+    }
+    .loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.116);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+}
+.custom-loader {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    padding:1px;
+    background:conic-gradient(#0000 10%,rgb(29, 207, 159) ) content-box;
+    -webkit-mask:
+      repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+      radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 8px));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation:s4 1s infinite steps(10);
+  }
+  @keyframes s4 {to{transform: rotate(1turn)}}
+
+</style>
+<body>
+    <div class="loader d-none">
+        <div class="custom-loader"></div>   
+     </div>
+    <div class="container cont">
+        <div class="row p-3">
+            <div class="col-12 col-md-6 shadow m-auto p-4" id="content">
+                <div class="alert  d-none" role="alert" id="alertbox">
+                    <p class="msg"></p>
+                </div>
+                <img src="images/logo-light.png" alt="" class="mb-3">
+                <h3 class="mb-4">Upload Profile Image Here</h3>
+                <form action="" method="POST" enctype="multipart/form-data" id="form">
+                    
+                    <input type="file" class="profile mb-1" name="profile_image" placeholder="upload ur profile">
+                    <input type="submit" value="finish" class="profile btn btn-sm btn-success">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="imageupload.js"></script>
+
+</html>

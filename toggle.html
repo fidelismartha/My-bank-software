@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>toggle</title>
+</head>
+<style>
+    .mydiv{
+        width: 50%;
+        height: 40px;
+        background-color: plum;
+    }
+    .dark{
+        background-color: black;
+        color: white;
+    }
+    .div3{
+        width: 50px;
+        height: 50px;
+        background-color: red;
+    }
+    .light{
+        background-color: white;
+    }
+</style>
+<body>
+<button type="button" class="btn btn-primary" onclick="showdiv()">open</button>
+    <div class="mydiv">
+    </div>
+    
+    <button type="button" class="btn-primary btn" onclick="darkmode()">darkmode</button>
+    <h1>darj mode and light mode</h1>
+    <div class="div3">hee</div>
+    <p>Return the integer part of a number (remove the decimals):</p>
+    <p id="tet"></p>
+    <img src="" alt="">
+    <p id="txt"></p>
+    <input type="text" id="input">
+    <input type="submit" name="" id="" value="submit" onclick="submit()">
+</body>
+<script>
+    function showdiv(){
+        let mydiv = document.querySelector(".mydiv");
+        if (mydiv.style.display === "none") {
+            mydiv.style.display ="block"
+        } else {
+            mydiv.style.display="none"
+        }
+    }
+    function darkmode(){
+        let div = document.querySelector("div")
+      var element = document.body;
+   element.classList.toggle("dark")
+   div3.classList.toggle("light")
+   
+    }
+
+    let m = Math.trunc(65.66666)
+    document.getElementById("tet").innerHTML = m;
+
+    function submit() {
+        const txt = document.getElementById("txt")
+     const inp =   document.getElementById("input");
+        txt.innerHTML= inp.value;
+        inp.value = "";
+    }
+</script>
+</html>

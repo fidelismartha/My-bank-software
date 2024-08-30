@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title></title>
+</head>
+<style>.loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.116);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+}
+
+/* /* ....... *loader style starts  */
+
+  
+.custom-loader {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    padding:1px;
+    background:conic-gradient(#0000 10%,rgb(29, 207, 159) ) content-box; 
+    -webkit-mask:
+      repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+      radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 8px));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation:s4 1s infinite steps(10);
+  }
+  @keyframes s4 {to{transform: rotate(1turn)}}
+
+
+
+    .input {
+        /* width: 400px; */
+        background-color: ghostwhite;
+        height: 45px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        text-indent: 10px;
+    }
+    .input::placeholder{
+        font-size: 15px;
+    }
+    .text{
+        font-size: 18px;
+        color: #6c757d;
+        animation: zoomFrom  2s infinite ease-in-out;
+    }
+    @keyframes zoomFrom{
+        0%{
+            /* opacity: 0; */
+            /* transform: translatex(-20px); */
+            color: red;
+        }
+        100%{
+
+            /* opacity: 1; */
+            /* transform: translatex(0); */
+            color: #757d;
+        }
+    }
+    .bb{
+        background-color: rgb(13, 202, 161);
+        color: white;
+        border-radius: 24px;
+        /* padding: 10px 15px; */
+        cursor: pointer; 
+        transition:  rgb(13, 202, 161) 0.8s ease; 
+    }
+    .inputotp{
+        font-size: large;
+    }
+    
+</style>
+<body>
+
+    <div class="loader d-none">
+        <div class="custom-loader"></div>   
+     </div>
+
+    <div class="container  cont">
+       <form action="" method="POST" id="form">
+        <div class="row  mt-4  mb-3 d-flex justify-content-center">
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="images/logo-light.png" alt="">
+                
+            </div>
+        </div>
+        <div class="row d-block  justify-content-center">
+            <div class="col-md-6  m-auto">
+               <p class="text-center text" id="erro"></p>
+               <h1 id="success" class="text-center"></h1>
+            </div>
+            <div  class="text-center m-auto bg-light p-1 mb-2 col-md-6 " style="border-radius: 8px;">
+             <h3 style="font-weight: bold;">Verify your Account </h3>
+             <p>please click on the button below to verify ur account and start enjoying Our Bank!!</p>
+             <h1 id="code"></h1>
+            </div>
+        </div>
+        <div class="row  d-block justify-content-center ">
+            <div class="col-md-6 mb-2 m-auto d-flex justify-content-center ">
+               
+                <input type="text" id="inputotp"  name="otp_code"  class="input col-md-4" placeholder=" Enter Your 4 digit code">
+            </div>
+            <div class="col-md-6 border m-auto d-flex justify-content-center ">
+            
+                 <input type="submit" class="btn col-6 text-white" name="code"     value="verify" style=" background-color: rgb(13, 202, 161);">
+    
+        </div>
+       </form>
+    </div>
+    
+
+</body>
+<script src="opayveruification.js"></script>
+
+</html>

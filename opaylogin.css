@@ -1,0 +1,47 @@
+#exampleInputEmail::placeholder{
+font-size: smaller;
+}
+.label{
+    font-size: 12px;
+    text-indent: 10px;
+}
+#exampleInputPassword::placeholder{
+    font-size: smaller;
+}
+.fontsize{
+    font-size: 15px;
+}
+.submit2{
+    background-color: rgb(29, 207, 159);
+    color: white;
+}
+.linkcolor{
+    color:  rgb(29, 207, 159);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.116);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+}
+.custom-loader {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    padding:1px;
+    background:conic-gradient(#0000 10%,rgb(29, 207, 159) ) content-box;
+    -webkit-mask:
+      repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+      radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 8px));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation:s4 1s infinite steps(10);
+  }
+  @keyframes s4 {to{transform: rotate(1turn)}}
+
